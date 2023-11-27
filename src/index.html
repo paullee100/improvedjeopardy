@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jeopardy!!!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="main-screen-container">
+            <div class="row-container" id="category_row">
+                <div class="row"><span></span></div>
+                <div class="row"><span></span></div>
+                <div class="row"><span></span></div>
+                <div class="row"><span></span></div>
+                <div class="row"><span></span></div>
+                <div class="row"><span></span></div>
+            </div>
+
+            <div class="row-container" id="first_row">
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+            </div>
+
+            <div class="row-container" id="second_row">
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+            </div>
+
+            <div class="row-container" id="third_row">
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+            </div>
+
+            <div class="row-container" id="fourth_row">
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+            </div>
+
+            <div class="row-container" id="fifth_row">
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+                <div class="row" id="unrevealed"><span></span></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="prompt"><span>prompt</span></div>
+            <div class="daily-double"><span>DAILY DOUBLE</span></div>
+            <div class="timer"><span></span>01:00</div>
+            <div class="answer"><span>answer</span></div>
+        </div>
+
+        <div class="input-container">
+            <input type="file" id="file" class="file" accept=".txt" onchange="uploadFile(this)">
+            <button class="input-file-button" id="uploadNewData" disabled="true">Upload File</button>            
+        </div>
+
+        <div class="groups-container">
+            <table class="group">
+                <tr>
+                    <th>GROUP1</th>
+                    <th>GROUP2</th>
+                    <th>GROUP3</th>
+                    <th>GROUP4</th>
+                    <th>GROUP5</th>
+                    <th>GROUP6</th>
+                    <th>GROUP7</th>
+                    <th>GROUP8</th>
+                </tr>
+                    <th id="group-one-points">0</th>
+                    <th id="group-two-points">0</th>
+                    <th id="group-three-points">0</th>
+                    <th id="group-four-points">0</th>
+                    <th id="group-five-points">0</th>
+                    <th id="group-six-points">0</th>
+                    <th id="group-seven-points">0</th>
+                    <th id="group-eight-points">0</th>
+                <tr>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-one" onclick="addPoints(1)">+</button>
+                            <button class="minus" id="group-one" onclick="minusPoints(1)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-two" onclick="addPoints(2)">+</button>
+                            <button class="minus" id="group-two" onclick="minusPoints(2)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-three" onclick="addPoints(3)">+</button>
+                            <button class="minus" id="group-three" onclick="minusPoints(3)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-four" onclick="addPoints(4)">+</button>
+                            <button class="minus" id="group-four" onclick="minusPoints(4)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-five" onclick="addPoints(5)">+</button>
+                            <button class="minus" id="group-five" onclick="minusPoints(5)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-six" onclick="addPoints(6)">+</button>
+                            <button class="minus" id="group-six" onclick="minusPoints(6)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-seven" onclick="addPoints(7)">+</button>
+                            <button class="minus" id="group-seven" onclick="minusPoints(7)">-</button>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="add-minus-container">
+                            <button class="add" id="group-eight" onclick="addPoints(8)">+</button>
+                            <button class="minus" id="group-eight" onclick="minusPoints(8)">-</button>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th><input type="number" class="number" id="input-group-one"></th>
+                    <th><input type="number" class="number" id="input-group-two"></th>
+                    <th><input type="number" class="number" id="input-group-three"></th>
+                    <th><input type="number" class="number" id="input-group-four"></th>
+                    <th><input type="number" class="number" id="input-group-five"></th>
+                    <th><input type="number" class="number" id="input-group-six"></th>
+                    <th><input type="number" class="number" id="input-group-seven"></th>
+                    <th><input type="number" class="number" id="input-group-eight"></th>
+                </tr>
+            </table>
+        </div>
+
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
